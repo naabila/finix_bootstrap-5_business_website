@@ -1,0 +1,13 @@
+//========= Section Title =======================================================================================================
+
+ <div class="section-title text-center ">
+        <p class="section-title-top">
+            Transparent process
+        </p>
+        <h2>
+            Why people choose us
+        </h2>
+        <p class="section-title-bottom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>

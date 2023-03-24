@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --default-red:#e73c3e;
+    --light-bg:#f9fafb;
+    --sec-title-color:#111111;
+    --para-color:#606060;
+    --link-color:#212529;
+    --subtitle-heading-h2-font-size:3.6rem;
+    --line-height-h2:4.4rem;
+    
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Rubik', sans-serif;
+}
+h2,h3,h4,h5{
+    color: var(--sec-title-color);
+}
+
+p{
+   font-size: 1.6rem;
+   line-height: 2.9rem;
+   color: var(--para-color);
+}
+h1{
+    font-size: 6rem;
+}
+img{
+    max-width: 100%;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* =============================================================================== Common Css=========================================================================== */
+.btn{
+    color: #fff;
+    
+}
+.side-spacing{
+    margin: 0 6rem;
+}
+.padding-up-down{
+    padding: 9rem 0;
+}
+.bottom-padding{
+    padding-bottom: 9rem;
+}
+.top-padding{
+    padding-top: 9rem;
+}
+/* section title */
+.section-title{
+    width: 35%;
+    margin: auto;
+}
+p.section-title-top{
+    color: var(--default-red);
+
+}
+.section-title h2{
+    font-size: var(--subtitle-heading-h2-font-size);
+    font-weight: 500;
+    line-height: 4.4rem;
+    margin: 0rem 0 1.6rem 0;
+
+}
+/* section title secondary */
+ 
