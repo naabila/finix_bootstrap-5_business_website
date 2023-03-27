@@ -11,25 +11,41 @@
 }
 html{
     font-size: 62.5%;
+    height: 100%;
 }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,a{
     font-family: 'Rubik', sans-serif;
+    font-weight: 500;
 }
 h2,h3,h4,h5{
     color: var(--sec-title-color);
+    
+}
+h3,h4{
+    font-size: clamp(2rem,2.5vw,2.8rem);
+    line-height: 3rem;
 }
 
 p{
-   font-size: 1.6rem;
+   font-size: clamp(1.6rem , 1.8vw , 2rem);
    line-height: 2.9rem;
    color: var(--para-color);
+}
+span{
+    color: #fff;
+    font-size: clamp(1.8rem,2vw,2.2rem);
+    
 }
 h1{
     font-size: 6rem;
@@ -39,16 +55,34 @@ img{
 }
 ul li{
     list-style-type: none;
+    display: inline-block;
 }
 a{
     text-decoration: none;
+    color: var(--sec-title-color);
+    transition: .3s;
+
+}
+a:hover{
+    color: var(--default-red);
 }
 
 
 /* =============================================================================== Common Css=========================================================================== */
 .btn{
     color: #fff;
+    background-color: var(--default-red);
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 1.3rem 4.5rem;
+    text-align: center;
+    border-radius: .5rem;
     
+}
+.btn:hover{
+    color: #fff;
+    background-color: var(--sec-title-color);
+
 }
 .side-spacing{
     margin: 0 6rem;
@@ -62,6 +96,7 @@ a{
 .top-padding{
     padding-top: 9rem;
 }
+
 /* section title */
 .section-title{
     width: 35%;
@@ -79,4 +114,675 @@ p.section-title-top{
 
 }
 /* section title secondary */
+
+/* ===================================================================================================================== Navigation Bar===================================================== */
+header.header{
+    transition: all .4s ease;
+}
+header.header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: .4s;
+    background-color: #fff;
+    height: 8rem;
+    box-shadow: -1px -3px 15px 0px rgb(0 0 0 / 55%);
+    animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+    height: 10rem;
+   
+
+}
+/* midd;e */
+ul.navbar-nav {
+    margin-left: auto;
+    margin-right: 3rem;
+}
+ul.navbar-nav li.nav-item{
+    margin: 0 1.5rem;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    color: var(--sec-title-color);
+    font-size: 1.8rem;
+    transition: .3s;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover{
+color: var(--default-red);
+}
+
+/* End section */
+.nav-end-content{
+    gap: 5rem;
+}
+.nav-end-content-section-one img{
+    margin-top: 1.5rem;
+}
+.nav-end-content-section-two{
+    gap: 1rem;
+
+}
+
+.nav-end-content-section-two img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 1rem;
+
+
+}
+.nav-end-content-section-two h5{
+    font-size: 2rem;
+}
+
+/* responsive menu section */
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+    color: var(--default-red);
+}
+.navbar{
+    padding: 1rem 4.5rem;
+}
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+/* ===================================================================================================================== Hero section ===================================================== */
+.hero{
+    background-image: url('../images/main-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+.hero::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+/* hero top-------------------------- */
+.hero-top-content{
+    padding: 20rem 0 20rem 5rem;
+    z-index: 99;
+    position: relative;
+}
+.hero-top-content span{
+    color: #fff;
+    
+}
+.hero-top-content h1{
+    color: #fff;
+    font-size: clamp(1.6rem , 6.8vw , 7.5rem);
+}
+.hero-top-content p{
+    color: #fff;
+    font-size: clamp(2rem, 2vw,2.2rem);
+    padding: 3rem 0;
+    line-height: 4rem;
+}
+ul.hero-icon-lists {
+    margin-left: -2rem;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 50%;
+    right: -115%;
+}
+li.dash {
+    width: 5rem;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 0.5rem;
+}
+ul.hero-icon-lists li {
+    margin-right: 2rem;
+    
+   
+}
+
+/* hero bottom---------------------------- */
+.hero-bottom-content{
+    border-top: 1px solid #ffffff7e;
+    z-index: 99;
+    position: relative;
+    /* padding: 0 5rem; */
+    
+}
+.icon-parent {
+    position: relative;
+}
+.hero-singele-icon-box {
+    padding: 3.3rem 3rem 3.3rem 3rem;
+}
+.hero-singele-icon-box:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 0%;
+    /* right: 0; */
+    background-color: #ffffff7e;
+}
+.hero-singele-icon-box img {
+    width: 5rem;
+    height: 6rem;
+    margin-top: 0.4rem;
+    margin-right: 2.5rem;
+}
+.hero-singele-icon-box p{
+    color: #fff;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+=====================================================================================================================  Footer===================================================== */
+footer.footer{
+    background: var(--sec-title-color);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    
+    margin-top: auto;
+
+}
+.footer-top{
+    padding: 10rem 0 7rem 0;
+}
+footer p{
+    color: #fff;
+}
+p.footer-text{
+    margin: 3rem 0;
+}
+ul.footer-icons {
+    margin-left: -20px;
+}
+ul.footer-icons span{
+font-size: 2rem;
+font-weight: 400;
+}
+.footer-icons li{
+    margin: 0 1rem
+}
+i.fa-brands.fa-linkedin,
+i.fa-brands.fa-facebook-f
+{
+    font-size: 2rem;
+}
+i.fa-brands.fa-twitter {
+    font-size: 2rem;
+}
+i.fa-brands.fa-instagram {
+    font-size: 2rem;
+}
+
+/* widget 2 */
+.widget-2,
+.widget-3{
+    padding-left: 2rem;
+}
+.footer h3{
+    color: #fff;
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+.footer-link-text{
+    margin-left: -2rem;
+    margin-top: 1rem;
+}
+.footer-link-text li{
+    padding: 1rem 0;
+}
+.footer-link-text li a{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: normal;
+    transition: all .5s ease;
+}
+.footer-link-text li a:hover,
+.contact-info span a:hover{
+    color: var(--default-red);
+    letter-spacing: 1.5px;
+    font-size: 1.9rem;
+}
+.footer-link-title{
+    border-bottom: 1px solid var(--para-color);
+}
+
+/* widget 4 */
+.contact-info {
+    font-size: 1.8rem;
+    display: flex;
+   
+    margin-top: 2.2rem;
+    margin-bottom: 2.4rem;
+
+}
+.contact-info span{
+    padding: 0 3rem;
+}
+.contact-info a{
+    color: #fff;
+}
+
+i.fa-solid.fa-location-dot,
+i.fa-regular.fa-envelope,
+i.fa-solid.fa-phone-volume {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+/* footer bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    border-top: 1px solid var(--para-color);
+}
+.footer-bottom p{
+    color: var(--para-color);
+}
+.footer-bottom  span{
+    color: #fff;
+}
  
