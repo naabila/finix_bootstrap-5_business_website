@@ -7,6 +7,7 @@
     --link-color:#212529;
     --subtitle-heading-h2-font-size:3.6rem;
     --line-height-h2:4.4rem;
+    --shadow:0 2px 28px 0 rgba(0, 0, 0, 0.09);
     
 }
 html{
@@ -18,7 +19,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -38,13 +39,13 @@ h3,h4{
 }
 
 p{
-   font-size: clamp(1.6rem , 1.8vw , 2rem);
+   font-size: clamp(1.5rem , 1.6vw , 1.8rem);
    line-height: 2.9rem;
    color: var(--para-color);
 }
 span{
     color: #fff;
-    font-size: clamp(1.8rem,2vw,2.2rem);
+    font-size: clamp(1.6rem,1.6vw,1.8rem);
     
 }
 h1{
@@ -99,21 +100,33 @@ a:hover{
 
 /* section title */
 .section-title{
-    width: 35%;
+    
+    margin: 0 auto 5rem auto;
+}
+.section-title p{
+    max-width: 550px;
     margin: auto;
+    font-size: 1.6rem;
 }
 p.section-title-top{
     color: var(--default-red);
 
 }
 .section-title h2{
-    font-size: var(--subtitle-heading-h2-font-size);
+    font-size: clamp(2.4rem,4.4vw,4.5rem);
     font-weight: 500;
     line-height: 4.4rem;
     margin: 0rem 0 1.6rem 0;
 
 }
 /* section title secondary */
+.section-title-light {
+    font-size: clamp(1.8vw,4.1vw,4.1rem);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 16px;
+    line-height: 5.5rem;
+}
 
 /* ===================================================================================================================== Navigation Bar===================================================== */
 header.header{
@@ -276,6 +289,282 @@ ul.hero-icon-lists li {
 .hero-singele-icon-box p{
     color: #fff;
     
+}
+
+/* ===================================================================================================================== About section ===================================================== */
+.about-image {
+    position: relative;
+    margin-top: 7rem;
+}
+
+
+img.about-image-two {
+    position: absolute;
+    top: 14rem;
+    left: 27%;
+}
+.experience {
+    z-index: 1;
+    position: absolute;
+    background: #fff;
+    padding: 4rem;
+    border-left: 2px solid var(--default-red);
+    box-shadow: var(--shadow);
+    
+    top: 93%;
+    width: clamp(30rem,50vw,55.5vw);
+    gap: 2rem;
+
+}
+.experience h5 {
+    /* font-size: 1rem; */
+    font-size: clamp(4.5rem,8vw,8rem);
+    margin-bottom: 0;
+    position: absolute;
+    left: 50px;
+    top: 35px;
+    font-weight: 400;
+}
+.experience p {
+    font-size: 28px;
+    color: #111111;
+    font-weight: 400;
+    margin-bottom: 0;
+    /* padding-left: 120px; */
+    line-height: 1.4;
+    font-family: "Rubik", sans-serif;
+}
+
+
+
+/* about texts */
+.about-text-content span{
+    color: var(--default-red);
+}
+
+.about-text-content strong{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--para-color);
+    margin-bottom: 4rem;
+}
+.about-lists {
+    margin: 2rem 0;
+}
+.check-list {
+    margin-top: 1rem;
+}
+.check-list img {
+    margin-top: -4px;
+    margin-right: 1rem;
+}
+.check-list span{
+    color: var(--para-color);
+}
+
+/* ===================================================================================================================== Why choose us section ===================================================== */
+.why-choose-us{
+    background-color: var(--light-bg);
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    margin: 1.5rem .7rem;
+    transition: .3s;
+}
+.service-box:after {
+    position: absolute;
+    content: "";
+    background-color: #fdebeb;
+    height: 60%;
+    width: 90%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -34%;
+    z-index: 0;
+    transition: all .4s;
+}
+.service-box:hover{
+    transform: translateY(-10px);
+}
+.service-box:hover.service-box:after{
+background-color: var(--default-red);
+}
+.service-box-img{
+    z-index: 10;
+}
+
+
+.service-box-img img {
+    background: #fff;
+    border-radius: 100%;
+    padding: 2rem;
+    width: 10rem;
+    height: 10rem;
+}
+.service-box h5{
+    font-size: 2.5rem;
+    margin: 2.5rem 0 2rem 0;
+}
+
+
+/* ===================================================================================================================== company value section ===================================================== */
+
+.company-value-image {
+    background-image: url('../images/company.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.company-value-image img {
+    height: 100%;
+    width: 100%;
+}
+.company-text-container {
+    position: relative;
+    max-width: 61rem;
+    margin: 4rem 0 0 0;
+}
+
+.company-text-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 6rem;
+}
+
+.company-text-content {
+    padding-left: 9rem;
+}
+
+.company-value-text {
+    margin: 10rem 0;
+}
+
+.company-value-text h3 {
+    font-size: clamp(3.3rem,3.6vw,4rem);
+}
+
+/* ===================================================================================================================== services section ===================================================== */
+.services{
+    background-color: var(--light-bg);
+    padding: 10rem 0;
+}
+
+/* ===================================================================================================================== funding section ===================================================== */
+
+/* Step section */
+.funding-step {
+    padding-bottom: 2rem;
+    padding-right: 4rem;
+}
+.single-step span {
+    color: var(--default-red);
+    top: 0;
+    position: absolute;
+    left: 0;
+    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid var(--default-red);
+    border-radius: 100%;
+    
+    background: #f9fafb;
+}
+
+.single-step {
+    position: relative;
+    padding-left: 0rem;
+    padding-left: 7rem;
+    margin-top: 5rem;
+}
+.single-step:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: var(--default-red);
+    height: 150%;
+    left: 2rem;
+    top: 0;
+    z-index: 2rem;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+.single-step:last-child::after{
+width: 0;
+}
+.single-step h4{
+    margin-bottom: 1.5rem;
+}
+
+/* loan rate form */
+.loan-rate{
+    background-color: var(--default-red);
+    padding: 1rem 5rem 5rem 5rem;
+    margin-top: 3rem;
+}
+
+
+.loan-rate.content {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 2rem;
+}
+.form-label {
+    margin-bottom: .5rem;
+    color: #fff;
+    font-size: clamp(1.4rem,1.7vw,1.8rem);
+}
+input.form-control {
+    padding: 1.5rem;
+    border-radius: 6px;
+    font-size: clamp(1.4rem,1.6vw,1.8rem);
+}
+.form-control:focus,
+.form-control:active{
+    border-color: transparent;
+    border: none;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,0);
+}
+
+.loan-rate.content h2 {
+    color: #fff;
+    font-size: clamp(2.5rem,3.4vw,3.6rem);
+}
+
+button.loan-rate-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    font-size: clamp(1.5rem,1.6vw,1.8rem);
+    border-radius: 7px;
+    transition: .4s;
+    margin-top: 3rem;
+}
+button.loan-rate-btn:hover {
+    color: #fff;
+    background-color: var(--sec-title-color);
 }
 
 

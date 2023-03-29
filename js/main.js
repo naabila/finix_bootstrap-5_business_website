@@ -2,7 +2,6 @@
 jQuery(document).ready(function () {
     //wow js
     new WOW().init();
-
 	//hamburger
     $('.hamburger').click(()=>
     $('.hamburger').toggleClass('is-active') )

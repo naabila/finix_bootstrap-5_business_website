@@ -1,3 +1,4 @@
+
 @media(max-width:991px){
    /* ====================================================== Navigation menu========== */
    .nav-end-section{
@@ -32,6 +33,8 @@ ul.hero-icon-lists li {
 .hero-bottom-content{
     padding: 0 3.5rem;
 }
+/* About----------------------------- */
+
 
 
 
@@ -96,6 +99,13 @@ ul.hero-icon-lists li {
         height: 1px;
        
     }
+    /* loan rate form */
+    .loan-rate{
+        margin-top: 5rem;
+        padding: 2rem 1rem;
+    }
+    
+    
    
     
     
