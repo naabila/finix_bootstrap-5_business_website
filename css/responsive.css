@@ -1,4 +1,8 @@
-
+@media(max-width:1024px){
+    img.about-image-two {
+       
+        padding-right: 1rem;}
+}
 @media(max-width:991px){
    /* ====================================================== Navigation menu========== */
    .nav-end-section{
@@ -10,6 +14,7 @@
    .navbar-collapse{
     margin-top: 3rem;
 }
+
 
 /* Hero section-------------------------- */
 .hero-top-content{
@@ -33,7 +38,13 @@ ul.hero-icon-lists li {
 .hero-bottom-content{
     padding: 0 3.5rem;
 }
-/* About----------------------------- */
+/* project----------------------------- */
+.project-conteiner{
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    column-gap: 3rem;
+    text-align: center;
+}
+
 
 
 
@@ -90,6 +101,10 @@ ul.hero-icon-lists li {
     /* html{
         font-size: 56%;
     } */
+    /* common css */
+    .padding-up-down{
+        padding: 5rem 0;
+    }
     .hero-bottom-content{
         padding: 0 2rem;
     }
@@ -99,10 +114,31 @@ ul.hero-icon-lists li {
         height: 1px;
        
     }
+
+    /* About */
+    .about-image {
+        position: initial;
+        padding-bottom: 5rem;
+        padding-right: 0;
+    }
+    .about-image img{
+        width: 100%;
+    }
+    
+    img.about-image-two {
+        position: initial;
+        
+        
+        margin-top: 3rem;
+    }
     /* loan rate form */
     .loan-rate{
         margin-top: 5rem;
         padding: 2rem 1rem;
+    }
+    /* project */
+    button.owl-prev {
+        left: -11%;
     }
     
     
